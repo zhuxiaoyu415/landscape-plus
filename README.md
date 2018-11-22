@@ -37,7 +37,7 @@
 或者直接使用最新版：（可能会存在bug，谨慎使用）
 
 ```bash
-git clone https://github.com/xiangming/landscape-plus.git themes/landscape-plus
+git clone https://github.com/zhuxiaoyu415/landscape-plus.git themes/landscape-plus
 ```
 
 ## <a name='enable'>启用</a>
