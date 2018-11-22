@@ -1,40 +1,81 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  #官网: http://xiaoxiaomo.com
+  首页: /
+  所有文章: /archives
+  相册: /photo
+  关于我: /about
+
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: 阅读全文
 fancybox: false
 mathjax: false
 
 # Sidebar
+# widgets=home
 sidebar: right
 widgets:
+- recommend_posts
 - category
-- tag
-- tagcloud
 - archive
+- tagcloud
+- weibo
+- recent_comments
 - recent_posts
 - links
 
+wcategory:
+- category
+
+warchives:
+- archive
+
+wtag:
+- tag
+
+wother:
+- category
+- tag
+- archive
+
 # Links
 links:
-  主题作者: http://arvinxiang.com
-  热前端: http://reqianduan.com
-  远程.work: http://yuancheng.work
+  开源中国: http://my.oschina.net/twosnail
+  Twor: http://blog.bantwor.com/
+  梦想家's Blog: http://mxjhaima.com/
+  聆听的幻树: http://blog.csdn.net/u011204847
+  Hiphop&coder: http://blog.rapcoder.com
+  TIME渐行渐远": http://dmlcoding.com
+  Sarah's World": https://sarahzhu.top
+  Acexy-博客": http://www.thankjava.com/
+
+# recommend_posts
+recommend_posts:
+  SparkStreaming-应用与实战: /2017/06/10/SparkStreaming-应用与实战-一/
+  HBase-服务异常排查: /2017/03/29/HBase-服务异常排查/
+  Hive-执行流程和源码解析: /2016/08/06/Hive-执行流程和源码解析/
+  Hadoop-MapReduce源码分析: /2016/07/08/Hadoop-MapReduce源码分析/
+  HBase-读写数据: /2016/06/05/HBase-读写数据/
+  Kafka-Consumer消费者: /2016/05/14/Kafka-Consumer消费者/
 
 # Miscellaneous
-google_analytics:
-favicon: /favicon.png
+google_analytics: UA-77355962-1
+favicon: /favicon.ico
 twitter:
 google_plus:
 fb_admins: 
 fb_app_id:
 
-# Duoshuo
-duoshuo_shortname: reqianduan
+# yungentie
+yungentie_shortname: xiaoxiaomo
 
 # Baidu share
 baidushare: true
+
+# Baidu statistic
+baidu_tongji: true
+
+swift_search:
+  enable: true

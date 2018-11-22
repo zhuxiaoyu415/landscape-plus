@@ -15,9 +15,9 @@ var duoshuoQuery = {short_name:"<%= config.duoshuo_shortname || theme.duoshuo_sh
   })();
   </script>
 <!-- 多说公共js代码 end -->
-<% } else if (config.disqus_shortname || theme.disqus_shortname){ %>
+<% } else if (config.disqus_shortname){ %>
 <script>
-  var disqus_shortname = '<%= config.disqus_shortname || theme.disqus_shortname %>';
+  var disqus_shortname = '<%= config.disqus_shortname %>';
   <% if (page.permalink){ %>
   var disqus_url = '<%= page.permalink %>';
   <% } %>
@@ -42,24 +42,15 @@ var duoshuoQuery = {short_name:"<%= config.duoshuo_shortname || theme.duoshuo_sh
     <a class="article-share-more" data-cmd="more" title="更多"></a>
   </div>
 </div>
-<script>
-  function SetShareData(cmd, config) {
-    if (shareDataTitle && shareDataUrl) {
-      config.bdText = shareDataTitle;
-      config.bdUrl = shareDataUrl;
-    }
-    return config;
-  }
-  window._bd_share_config={
-    "common":{onBeforeClick: SetShareData},
-    "share":{"bdCustomStyle":"<%- url_for("/css/bdshare.css") %>"}
-  };
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"<%- url_for("/css/bdshare.css") %>"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>
 <% } %>
 <!-- 百度分享 end -->
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- cdn jquery.min.js" -->
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript"> !window.jQuery && document.write('<script src=http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js><\/script>'); </script>
+
 
 <% if ((config.fancybox || theme.fancybox)){ %>
   <%- css('fancybox/jquery.fancybox') %>

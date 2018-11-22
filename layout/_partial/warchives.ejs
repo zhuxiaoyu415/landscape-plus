@@ -1,0 +1,5 @@
+<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <% theme.warchives.forEach(function(widget){ %>
+    <%- partial('_warchives/' + widget) %>
+  <% }) %>
+</aside>

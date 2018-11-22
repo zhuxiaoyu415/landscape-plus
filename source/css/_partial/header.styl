@@ -29,8 +29,8 @@
   left: 0
   width: 100%
   height: 100%
-  background: #21282E
-  // background: url(banner-url) center #000
+  //background: #21282E
+  background: url(banner-url) center #000
   background-size: cover
   z-index: -1
 
@@ -53,7 +53,7 @@ $logo-text
   font-size: logo-size
   line-height: logo-size
   letter-spacing: 2px
-  background: #E32D40
+  //background: #E32D40
   padding: 5px 10px
   border-radius: 5px
 
@@ -69,7 +69,7 @@ $logo-text
 
 #main-nav
   float: left
-  margin-left: -15px
+  margin-left: -10px
 
 $nav-link
   float: left
@@ -79,7 +79,7 @@ $nav-link
   text-shadow: 0 1px rgba(0, 0, 0, 0.2)
   transition: opacity 0.2s
   display: block
-  padding: 20px 15px
+  padding: 30px 10px
   &:hover
     opacity: 1
 
@@ -90,27 +90,24 @@ $nav-link
   font-size: font-size
   width: font-size
   height: font-size
-  padding: 20px 15px
+  padding: 30px 10px 20px 10px
   position: relative
   cursor: pointer
 
 .main-nav-link
   @extend $nav-link
-  font-weight: 300
-  letter-spacing: 1px
-  @media mq-mobile
-    display: none
+  font-weight: 100
+  letter-spacing: 2px
+  font-size: 16px
 
 #main-nav-toggle
   display: none
   &:before
     content: "\f0c9"
-  @media mq-mobile
-    display: block
 
 #sub-nav
   float: right
-  margin-right: -15px
+  margin-right: -10px
 
 #nav-rss-link
   &:before

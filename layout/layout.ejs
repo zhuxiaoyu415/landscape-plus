@@ -28,9 +28,23 @@
   <div id="wrap">
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <div class="outer">
-      <section id="main"><%- body %></section>
-      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+      <% if (is_post()) { %>
+        <section style="margin: 0 0.833333333333333%;"><%- body %></section>
+      <% }else { %>
+        <section id="main"><%- body %></section>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+          <%if (is_home()) { %>
+            <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+          <% }else if (is_category()) { %>
+            <%- partial('_partial/wcategory', null, {cache: !config.relative_link}) %>
+          <% }else if (is_archive()) { %>
+            <%- partial('_partial/warchives', null, {cache: !config.relative_link}) %>
+          <% }else if (is_tag()) { %>
+            <%- partial('_partial/wtag', null, {cache: !config.relative_link}) %>
+          <% }else{ %>
+            <%- partial('_partial/wother', null, {cache: !config.relative_link}) %>
+          <% } %>
+        <% } %>
       <% } %>
     </div>
     <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

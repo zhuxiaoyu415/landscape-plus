@@ -4,6 +4,8 @@
 .article-inner
   @extend $block
   overflow: hidden
+  border: 1px solid color-border
+  box-shadow: 1px 2px 3px color-border  
 
 .article-meta
   clearfix()
@@ -11,27 +13,34 @@
 .article-date
   @extend $block-caption
   float: left
+  &:before
+    font-family: font-icon
+    color: #ccc
+    content: "\f073"
 
 .article-category
   float: left
   line-height: 1em
   color: #ccc
   text-shadow: 0 1px #fff
-  margin-left: 8px
+  margin-left: 14px
   &:before
-    content: "\2022"
+    font-family: font-icon
+    content: "\f06c"
 
 .article-category-link
   @extend $block-caption
-  margin: 0 12px 1em
+  margin: 0 3px 1em
 
 .article-header
-  padding: article-padding article-padding 0
+  padding: article-padding article-padding article-padding article-padding
+  background-color: #e5e5e5
+  border-bottom: 1px solid color-border
 
 .article-title
   text-decoration: none
-  font-size: 2em
-  font-weight: bold
+  font-size: 1.8em
+  #font-weight: bold
   color: color-default
   line-height: line-height-title
   transition: color 0.2s
@@ -63,7 +72,6 @@
     max-width: 100%
     height: auto
     display: block
-    margin: auto
   iframe
     border: none
   table
@@ -155,8 +163,10 @@
   margin-right: 10px
 
 .article-tag-list-link
+  a&:hover
+    color: color-link
   &:before
-    content: "#"
+    content: "✎"
 
 .article-comment-link
   float: right
@@ -397,3 +407,26 @@ $article-gallery-ctrl
   &:before
     content: "\f054"
     right: 15px*/
+
+.toc-article
+  background #eee
+  border 1px solid #bbb
+  border-radius 10px
+  margin 1.5em 0 0.3em 1.5em
+  padding 1.2em 1em 0 1em
+  max-width 28%
+.toc-title
+  font-size 120%
+  
+#toc
+  line-height 1em
+  font-size 0.9em
+  float right
+  .toc
+    padding 0
+    margin 1em 0
+    line-height 1.8em
+    li
+      list-style-type none
+  .toc-child 
+    margin-left 1em

@@ -1,0 +1,13 @@
+#main{
+	width: 100%;
+}
+#sidebar{
+	display:none;
+}
+.instagram .img-box-ul li{
+	white-space: nowrap;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+

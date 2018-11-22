@@ -1,0 +1,5 @@
+<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <% theme.wother.forEach(function(widget){ %>
+    <%- partial('_wother/' + widget) %>
+  <% }) %>
+</aside>
